@@ -6,7 +6,7 @@
 const mySym = Symbol ("key1");
 
 let obj = {
-    name: "Divy Deshmukh",
+    name: "Divy Deshmukh",                  //by default the prop. on left side are also stored as strings
     "age": 21,
     course: "Computer Science",
     method: function () {
@@ -62,7 +62,7 @@ let obj = {
 
 console.log(obj.fullname.firstName);
 console.log(obj.fullname.lastName.lname);
-console.log(obj.fullname?.lastName.lname);             // Optional Chaining
+console.log(obj.fullname?.lastName.lname);             // Optional Chaining when we don't know whehter fullname exists or not
 
 
 //4. Merging Objects with Object.assign()
@@ -101,6 +101,8 @@ console.log(obj3);
 //}
 //console.log(obj.greeting());
 
+//we can also create them by using constructor functions and this context that we have covered later
+
 // 7. Array of Objects
 /*
 const arrOfObj = [              // basically it is an array of objects
@@ -118,7 +120,7 @@ console.log(arrOfObj[0].name);          //accessing properties of objects inside
 */
 
 /*
-// 8. COnverting Objects into an array
+// 8. Converting Objects into an array
 const obj = {
     name: "Divy",
     age: 21,
