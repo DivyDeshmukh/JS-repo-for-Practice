@@ -156,5 +156,13 @@ console.log(aayu);
 
 const {city = "Unknown"} = obj;
 
-*/
+// 10. Deleting Object Properties
+let obj = {
+    name: "divy",
+    age: 21,
+}
 
+delete obj.name;
+console.log(obj.name);
+
+*/
