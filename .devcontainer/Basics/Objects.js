@@ -62,7 +62,7 @@ let obj = {
 
 console.log(obj.fullname.firstName);
 console.log(obj.fullname.lastName.lname);
-console.log(obj.fullname?.lastName.lname);             // Optional Chaining when we don't know whehter fullname exists or not
+console.log(obj.fullname?.lastName.lname);             // Optional Chaining when we don't know whether fullname exists or not
 
 
 //4. Merging Objects with Object.assign()
@@ -140,7 +140,7 @@ const obj = {
     age: 21,
 }
 
-const {name, age} = obj;
+const {name, age} = obj;                    // now, when we don't have to write obj.name, obj.age again, we can directly use name and age.
 
 console.log(name);
 console.log(age);

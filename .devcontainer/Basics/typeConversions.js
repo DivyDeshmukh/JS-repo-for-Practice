@@ -10,7 +10,7 @@ console.log(String(undefined));         //"Undefined"
 console.log(String(false));             //"false"
 
 console.log(Boolean(21));               //returns true, and in case of 0 returns false
-console.log(Boolean(""));               //in case of empty string "" it will return false
+console.log(Boolean(""));               //in case of empty string "" it will return false and "divy" will return true
 console.log(Boolean(null));             //false
 console.log(Boolean(undefined));        //false
 

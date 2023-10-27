@@ -52,13 +52,19 @@ handleArrays(arr);
 
 */
 
+/*
 // 4. Global and Block Scope
 // global scope refers to the outermost space or area outside the if or function blocks
 // local scope or block scope refers to the area within the blocks (be it functions or if blocks)
 
+// var has global and function scope but not block scope (that is not for if or loops)
+// let and const has only block scope, by block we mean if or funct, or loops
+let a = 5;                                  // let and var are declared in different scopes that is why no error
 
 function add () {
-    var a = 5;
+    var a = 4;
+    console.log(a);
 }
 
-console.log(a);
+console.log(add());
+*/
