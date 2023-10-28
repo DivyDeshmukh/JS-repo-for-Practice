@@ -11,6 +11,8 @@ for (const i of arr) {                                  // here, 'i' is the vari
 
 /*
 for (const [key, value] of arr) {               // error: arrays are not in key-value pairs and hence, cannot be destructured like this.
+                                                // In an array, each element is typically a value without an associated key. For example, an array of numbers or strings doesn't have named keys like objects do.
+                                                // Therefore, you can't destructure an array into key and value in the same way you would with objects or Maps.
     console.log(key, value);
 }
 */
@@ -23,9 +25,9 @@ for (const str of string) {                             // it will iterate over 
 */
 
 
-// 2. Map Cosntructor
+// 2. Map Cosntructor                               // Maps creates iterable Objects
 const map = new Map();                              // Values must be unique and they will always be in proper order
-map.set('Name: ', 'Divy')
+map.set('name: ', 'Divy')
 map.set('age', 21)                                  // assigning values with set
 map.set('id', 34343);
 map.set('id', 12);                                  // this wiil override previous id value and id will come only once 
@@ -46,7 +48,7 @@ for (const i in map) {
 
 // Printing key and values differently
 
-for (const [key, value] of map) {               // this can be considered as destructuring of array
+for (const [key, value] of map) {               // this can be considered as destructuring of map into key value pair
     console.log(key, ":-", value);
 }
 
@@ -81,7 +83,8 @@ for (const [key, value] of Object.entries(obj)) {          // Object.entries met
 */
 
 /*
-// 3. for...in loop
+// 3. for...in loop                                         // for...in loop in JavaScript is specifically designed to iterate over the enumerable keys (property names) of objects.
+                                                             // It is a convenient way to enumerate the properties of an object, whether they are own properties or inherited properties from the object's prototype chain.
 for (const key in obj) {
     console.log(key, obj[key]);                             // it is used to iterate over keys of an object or indices of arrays, and we can access the values of that key by objectName[keyName], arrayName[index]
 }
@@ -106,7 +109,7 @@ arr.forEach ((val, index, arr) => {
     //console.log(val, index, arr);
 });
 
-function name (val, index, arr) {
+function name (val, index, arr) {                   // regular function: name
     //console.log(val, index, arr);
 }
 
@@ -136,4 +139,18 @@ myCoding.forEach ((val) => {                        // val will represent every 
     //console.log(val.name);
    // console.log(val["age"]);
 })
+
+// applying forEach to Objects by first converting them to arrays and now they will behave similar to arrays. 
+// It is important to note that objects and Map are different as Map are iterable objects and objects are not.
+const obj = {
+    name: "Divy",
+    age: 21,
+}
+
+var newObj = Object.entries(obj);
+console.log (newObj);
+newObj.forEach ( (val, index, arr) => {
+    console.log (val, index, arr);
+})
+
 */

@@ -4,6 +4,9 @@
 const arr = [1, 2, 3, 4, "Divy", true]
 
 console.log(arr[0]);
+
+const arr = new Array ([1, 4, 6, 3]);                   // Another way of creating arrays
+console.log (arr);
 */
 
 /*
@@ -44,13 +47,13 @@ console.log(arr);                         //splice will make changes in the orig
 //marvel_heros.push(dc_heros);                // this will add dc_heros to the marvel_heros array but as an array only
 
 //console.log(marvel_heros);
-//console.log(marvel_heros[2][1]);            //that is accessing 2nd element of the //3rd element which is array
+//console.log(marvel_heros[2][1]);            //that is accessing 2nd element of the 3rd element which is array
 
 //const newArr = marvel_heros.concat(dc_heros);                // this will concat both arrays and will "return" a new array
 //console.log(newArr);
 
 //merging with spread operator
-//const newArr = [...marvel_heros, ...dc_heros];                this will work same as concat
+//const newArr = [...marvel_heros, ...dc_heros];               // this will work same as concat
 //console.log(newArr);
 
 //const another_array = [1, 2, 3, [4, 5, 6], [7, 8, 9]]
@@ -64,7 +67,7 @@ console.log(Array.from("Divy"));                       // this will convert it i
 
 //interesting case
 
-console.log(Array.from({name: "Divy"}));                // this will return an [] empty array, bcoz whenever it fails to create an array then returns []
+console.log(Array.from({name: "Divy"}));                // this will return an [] empty array as .from can only be applied to the iterable objects and objects are not iterable by default, bcoz whenever it fails to create an array then returns []
 console.log(Array.of(100, 200));          //this will merge both and will make an array
 
 */

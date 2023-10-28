@@ -20,7 +20,7 @@ console.log(obj.sayHello());
 //console.log(this);                                          // it will return an empty object that is '{}', and in web browser it will give 'window' object
 
 /*
-// 3. "this" in Connstructor Functions
+// 3. "this" in Constructor Functions
 
 function Employee (name, age) {
     this.name = name;                                              // in constructor functions "this" is used to refer to the current object
@@ -35,9 +35,10 @@ console.log(obj1.age);
 /*
 // 4. "this" in regular functions
 function add () {
+    // var a = 4; //  returns 4 in this case, but if var declared outside this function that is in different scope then it will return undefined
     let a = 4;
    console.log(this);                              // in regular functions "this" refers to the global object in node and 'window' in web browser
-    console.log(this.a);                                // undefined bcoz this refers to the global object and global object do not have an 'a' property
+    console.log(this.a);                                // undefined bcoz this refers to the global object and global object do not have an 'a' property, but if we declare it inside this function with var then it will return the value inside var
 }
 
 add();

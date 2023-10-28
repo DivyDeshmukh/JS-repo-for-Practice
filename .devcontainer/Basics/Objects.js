@@ -1,8 +1,8 @@
 //different ways to create objects
 //1. Object Literal Notation
 
-/*
 
+/*
 const mySym = Symbol ("key1");
 
 let obj = {
@@ -27,16 +27,17 @@ console.log(obj[mySym]);            //symbol can be accessed by []
 obj.name = "Khushi";
 console.log(obj);
 
-obj.greeting = function () {           //declaring greeting method as property for obj
+
+obj.greeting = function () {           //declaring greeting method as property for obj, and obj.greeting contains reference of this anonymous function
     console.log(`How are you ${this.name}`);    //this here refers to the current object
 }
 
-console.log(obj.greeting);              //returns funcion anonymous
+console.log(obj.greeting);              //returns funcion anonymous because here passing reference not executing the method
 console.log(obj.greeting());
 
 */
 
-//2. Object.create()
+//2. Object.create()                            // this will create a singleton object
 /*
 const personPrototype = {
     name: "xyz",
@@ -100,7 +101,15 @@ console.log(obj3);
 //    console.log("Hello, world!");
 //}
 //console.log(obj.greeting());
+// we can pass object as an argument to the Object Construtor
+/*
+const obj = new Object ({
+    name: "Divy",
+    age: 21,
+});
 
+console.log(obj);
+*/
 //we can also create them by using constructor functions and this context that we have covered later
 
 // 7. Array of Objects
@@ -129,7 +138,7 @@ const obj = {
 
 console.log(Object.keys(obj));
 console.log(Object.values(obj));
-console.log(Object.entries(obj));
+console.log(Object.entries(obj));               // returns array of individual arrays of [key , value] pairs
 */
 
 /*
@@ -140,7 +149,7 @@ const obj = {
     age: 21,
 }
 
-const {name, age} = obj;                    // now, when we don't have to write obj.name, obj.age again, we can directly use name and age.
+const {name, age} = obj;                    // now, we don't have to write obj.name, obj.age again, we can directly use name and age.
 
 console.log(name);
 console.log(age);
@@ -162,7 +171,7 @@ let obj = {
     age: 21,
 }
 
-delete obj.name;
+delete obj.name;                            // delete can only be used to delete properties and methods of an objects and not variables
 console.log(obj.name);
 
 */

@@ -148,3 +148,5 @@ const priceToPay = shoppingCart.reduce((acc, item) => acc + item.price, 0)
 
 console.log(priceToPay);
 */
+
+// These methods can be applied to any Iterable Objects just like arrays

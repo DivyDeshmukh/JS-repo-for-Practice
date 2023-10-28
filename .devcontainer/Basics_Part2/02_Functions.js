@@ -28,7 +28,7 @@ function handleObject (anyObject) {
 
 //handleObject(user);
 
-// we can directly objects as arguments while calling the function
+// we can directly pass objects as arguments while calling the function
 
 handleObject({
     name: "Divy",
