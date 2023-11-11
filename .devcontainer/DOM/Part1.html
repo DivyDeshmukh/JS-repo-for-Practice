@@ -1,12 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM learning</title>
+    <title>Animation Event Example</title>
+    <style>
+        #animatedBox {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: relative;
+            animation: myAnimation 2s linear infinite;
+        }
+
+        @keyframes myAnimation {
+            0% { left: 0; }
+            50% { left: 50%; background-color: red; }
+            100% { left: 0; background-color: blue; }
+        }
+    </style>
 </head>
 <body>
-    <h1 class="head" id="head">Hello</h1>
-    <p class="para" id="para">Welcome to this Website</p>
+    <div id="animatedBox"></div>
+
+    <script>
+        var animatedBox = document.getElementById('animatedBox');
+
+        animatedBox.addEventListener('animationstart', function(event) {
+            // Handle animationstart event
+            console.log("Animation started. Event type: " + event.type);
+        });
+
+        animatedBox.addEventListener('animationiteration', function(event) {
+            // Handle animationiteration event
+            console.log("Animation iteration. Event type: " + event.type);
+        });
+
+        animatedBox.addEventListener('animationend', function(event) {
+            // Handle animationend event
+            console.log("Animation ended. Event type: " + event.type);
+        });
+    </script>
 </body>
 </html>

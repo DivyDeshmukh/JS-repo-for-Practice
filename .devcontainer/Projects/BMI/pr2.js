@@ -1,10 +1,10 @@
 // if we take values of height and weight here this will give NaN, because the script has just loaded and it do not contain any value
-
+/*
 let height = document.querySelector ('#height').value;
 let weight = document.querySelector ('#weight').value;
 console.log(height);
 console.log(weight);
-
+*/
 
 const form = document.querySelector ('form');
 

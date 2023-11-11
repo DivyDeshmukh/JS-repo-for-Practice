@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Learning</title>
+
+    <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: gilroy;
+    }
+
+    #wrapper {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      padding-left: 10px;
+    }
+
+    #card {
+        min-height: 22vmax;
+        min-width: 30vmax;
+        background-color: rgba(253, 253, 253, 0.747);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+        color: #000;
+    }
+
+    #card img {
+        height: 50%;
+        width: 50%;
+        background-color: blue;
+        margin-bottom: 15px;
+        object-fit: cover;
+        object-position: center;
+        
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 22px;
+        font-size: 4vmax;
+    }
+
+    h3 {
+        margin: 5px;
+        text-align: center;
+        color: red;
+        overflow-wrap: break-word;
+    }
+
+    h3 span {
+        color: #000;
+    }
+
+    #top {
+        font-size: 2.5vmax;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #input {
+        height: 5vmax;;
+        width: 17vmax;
+        margin-left: 3px;
+        font-size: 65%;
+        font-family: gilroy;
+        font-weight: 100;
+        border: 1px solid #fff;
+        border-radius: 5px;
+    }
+
+    button {
+        height: 4vmax;
+        width: 15vmax;
+        font-size: 70%;
+        font-family: gilroy;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    </style>
+
+</head>
+
+<body style="background-color: cornflowerblue; color: #fff;">
+
+    
+    <div id="wrapper">
+
+        <h1>Enter your Github Profile name w/o any spaces</h1>
+
+        <form>
+            <div id="top">
+                <label>Github Profile Name: <input type="text" id="input" placeholder="Github Profile Name">
+                </label>
+                <button type="submit">submit</button>
+            </div>
+        </form>
+
+        <div id="card">
+            <img src="https://t4.ftcdn.net/jpg/06/28/11/95/360_F_628119593_PqOWCrlIezk99YrcYJYVrNi8ow95dsNe.jpg" alt="profile">
+            <h3>Name: </h3>
+            <h3>Bio: </h3>
+            <h3>Repositories: </h3>
+        </div>
+    </div>
+
+    <script>
+
+        let name;
+
+        document.querySelector ('form').addEventListener ('submit', (e) => {
+            e.preventDefault();
+            name = document.querySelector ('input').value;
+
+            const httpRequest = new XMLHttpRequest ();
+            let requestUrl = 'https://api.github.com/users/';
+
+          httpRequest.open ('GET', requestUrl + name, true);
+          httpRequest.send ();
+
+          httpRequest.onreadystatechange = function () {
+             if (httpRequest.readyState === 4) {
+                 const data = JSON.parse (this.responseText);
+                 console.log(data);
+                 document.querySelector ('img').src = data.avatar_url;
+                 document.querySelectorAll ('h3')[0].innerHTML = '<span>Name: </span>'  + data.name;
+                 document.querySelectorAll ('h3')[1].innerHTML = '<span>Bio: </span>' + data.bio;
+                 document.querySelectorAll ('h3')[2].innerHTML = '<span>Repositories: </span>' + data.public_repos;
+             }
+        }
+        });
+        
+
+
+    </script>
+</body>
+</html>

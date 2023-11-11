@@ -70,4 +70,4 @@ console.log(Array.from("Divy"));                       // this will convert it i
 console.log(Array.from({name: "Divy"}));                // this will return an [] empty array as .from can only be applied to the iterable objects and objects are not iterable by default, bcoz whenever it fails to create an array then returns []
 console.log(Array.of(100, 200));          //this will merge both and will make an array
 
-*/
+*/setInterval (()=> {console.log("Hello")}, 2000);

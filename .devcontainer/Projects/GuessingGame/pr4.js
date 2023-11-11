@@ -43,10 +43,10 @@ let a = pg.innerHTML = `${prevGuesses}`;
 console.log (a);
 */
 // Another Method for project 4.
-/*
+
 let randomNumber = parseInt(Math.random() * 100 + 1);
 
-const submit = document.querySelector('#subt');
+const submit = window.querySelector('#subt');
 const userInput = document.querySelector('#guessField');
 const guessSlot = document.querySelector('.guesses');
 const remaining = document.querySelector('.lastResult');
@@ -135,7 +135,7 @@ function newGame() {
     playGame = true;
   });
 }
-*/
+
 // The second code snippet (code2) is generally more efficient and better organized for a number-guessing game. It uses better variable naming, a more structured approach, and handles user input validation more effectively. It also provides a clear start over and new game feature, making it a better choice for a user-friendly and maintainable application.
 
 
