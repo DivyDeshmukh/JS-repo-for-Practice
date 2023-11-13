@@ -1,7 +1,6 @@
 //different ways to create objects
 //1. Object Literal Notation
 
-
 /*
 const mySym = Symbol ("key1");
 
@@ -46,7 +45,8 @@ const personPrototype = {
 
 const obj1 = Object.create (personPrototype);           // in place of new this create method can be used
 obj1.name = "Divy";                                     // obj1 will inherit the properties of personPrototype
-console.log(obj1.name);
+console.log(obj1);                          // it is important to note that this will return an empty object bcoz obj1 do not directly inherit or copy prop. and methods of obj, instead obj acts as an prototype for the obj1
+console.log(obj1.name);                     // now, this will search for the name inside obj1 and after not finding that it will search in the prototypal chain of obj1
 */
 
 /*
@@ -93,6 +93,7 @@ console.log(obj3);
 // 6. Declaring objects with constructor functions
 
 //const obj = new Object();  //empty object it is similar to const obj = {}
+// const obj = new Object ({name: "divy", age: 21});            // we can do same with arrays as well
 
 // adding properties and methods to the empty object obj
 

@@ -127,6 +127,7 @@
 
     <script>
 
+        /*
         let name;
 
         document.querySelector ('form').addEventListener ('submit', (e) => {
@@ -150,8 +151,24 @@
              }
         }
         });
-        
+        */
 
+        let name;
+
+        document.querySelector ('form').addEventListener ('submit', (e) => {
+            e.preventDefault();
+            name = document.querySelector ('input').value;
+            request();
+        })
+
+        async function request () {
+            const response = await fetch ('https://api.github.com/users/' + name);
+            const data = await response.json ();
+            document.querySelector ('img').src = data.avatar_url;
+            document.querySelectorAll ('h3')[0].innerHTML = '<span>Name: </span>'  + data.name;
+            document.querySelectorAll ('h3')[1].innerHTML = '<span>Bio: </span>' + data.bio;
+            document.querySelectorAll ('h3')[2].innerHTML = '<span>Repositories: </span>' + data.public_repos;
+        }
 
     </script>
 </body>

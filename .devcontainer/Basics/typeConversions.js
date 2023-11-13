@@ -14,7 +14,7 @@ console.log(Boolean(""));               //in case of empty string "" it will ret
 console.log(Boolean(null));             //false
 console.log(Boolean(undefined));        //false
 
-//Undefined() and Null() are not constructors
+//Undefined() and Null() are not constructors, and this can be used as a point to say that not everything in js is an Object
 
 //Implicit Type Conversions
 
@@ -36,5 +36,6 @@ undefined + null = NaN
 
 //console.log(+true);  //converts boolean to number
 //console.log(+false);
+// when we enter an empty string inside Number(), then it will return 0.
 
 

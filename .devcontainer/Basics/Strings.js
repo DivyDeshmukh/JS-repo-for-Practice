@@ -1,6 +1,6 @@
 /*
 // 1.String is Primitive Data Type that is stored inside stack, as primitive data types do not have methods because they are not objects therefore, 
-// when we use properties or methods then they are primarily converted into objects temporaily
+// when we use properties or methods then they are primarily converted into wrapper objects temporaily
 
 // 2. Declaring Strings
 let str1 = "Divy ";
@@ -12,7 +12,7 @@ let str2 = new String ("Deshmukh");
 // 3. working with mmethods
 
 let str3 = "";
-str3 = str3.concat(str1, str2);                         // concatenate both the strings, it is important to note that we have to declare an empty string first
+str3 = str3.concat(str1, str2);                         // concatenate both the strings, it is important to note that we have to declare an empty string first, otherwise it will concatenate it with the undefined
 //console.log(str3);
 
 //console.log(str3.at(3));                               // this will return the character at that particular index

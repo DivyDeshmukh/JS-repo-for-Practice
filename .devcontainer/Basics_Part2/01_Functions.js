@@ -18,6 +18,7 @@ function add (num1, num2) {        // variables inside () of function are called
 }
 
 add (3, 6);                 // return statement will return a value that must be stored in a variable to use it later
+// It is important to note that everytime after running a method we get undefined in the console this is bcoz the method did not returned anything.
 let ans = add (3, 6);       // ans will contain the value returned by add i.e. num1+num2
 console.log(ans);
 

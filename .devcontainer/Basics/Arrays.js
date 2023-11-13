@@ -5,7 +5,7 @@ const arr = [1, 2, 3, 4, "Divy", true]
 
 console.log(arr[0]);
 
-const arr = new Array ([1, 4, 6, 3]);                   // Another way of creating arrays
+const arr = new Array ([1, 4, 6, 3]);                   // Another way of creating arrays, and this will create array of arrays
 console.log (arr);
 */
 
@@ -58,7 +58,7 @@ console.log(arr);                         //splice will make changes in the orig
 
 //const another_array = [1, 2, 3, [4, 5, 6], [7, 8, 9]]
 //console.log(another_array.flat());                              // this will give a single array
-//console.log(another_array.flat(Infinity));                         //this can also take the depth argument which specifies the depth to which we want it to make array flat
+//console.log(another_array.flat(Infinity));                      //this can also take the depth argument which specifies the depth to which we want it to make array flat
 
 /*
 // 4. working with Array.method(arr)            //Array is the global object fror arrays
@@ -67,7 +67,7 @@ console.log(Array.from("Divy"));                       // this will convert it i
 
 //interesting case
 
-console.log(Array.from({name: "Divy"}));                // this will return an [] empty array as .from can only be applied to the iterable objects and objects are not iterable by default, bcoz whenever it fails to create an array then returns []
+console.log(Array.from({name: "Divy"}));   // this will return an [] empty array as .from can only be applied to the iterable objects and objects are not iterable by default, bcoz whenever it fails to create an array then returns []
 console.log(Array.of(100, 200));          //this will merge both and will make an array
 
-*/setInterval (()=> {console.log("Hello")}, 2000);
+*/
