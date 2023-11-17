@@ -38,4 +38,4 @@ undefined + null = NaN
 //console.log(+false);
 // when we enter an empty string inside Number(), then it will return 0.
 
-
+// It is important to note that the type of NaN is also "Number";

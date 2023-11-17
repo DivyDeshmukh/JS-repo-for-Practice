@@ -1,3 +1,4 @@
+
 /*
 const date = new Date();                //returns the current time and date
 console.log(date);           //the format in which date is given is not understandable and hence there are different conversion methods that we can use to make it customized
