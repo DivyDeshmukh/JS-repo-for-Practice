@@ -32,6 +32,8 @@ console.log(arr);
 console.log(arr.includes(8))             //used to check whether the array contains the particular element or not
 console.log(arr.indexOf(2));             //returns the index of an element
 console.log(arr.join());                 //it binds all the elements of array into one string, but temporaily that is original array will remain same
+const arr = ['Divy', 'Ravindra', 'Deshmukh'];
+console.log(arr.join(' '));               // we can pass arguments that will determine how these strings will be seperated
 console.log(typeof arr.join());          //it will string
 
 console.log(arr.slice(1, 3));             //it will return elements starting from index 1, 2, and not 3 as it will be excluded
@@ -71,3 +73,12 @@ console.log(Array.from({name: "Divy"}));   // this will return an [] empty array
 console.log(Array.of(100, 200));          //this will merge both and will make an array
 
 */
+//consider this case in this in the merged array nested arrays are not passed as reference but nested objects does,
+// so when we make changes in the array of merged array it will not affect in the original one but when we make changes in the objects of the merged array it will affect the object in the original array.
+// const arr1 = [1, 3, 4, 5 , [45, 76, 90, 98], {name: 'Divy', age: 21}];
+// const arr = [...arr1];
+// console.log(arr);
+// arr[4] = [34,65];
+// arr[5].name = 'Khushi'
+// console.log(arr1);
+// console.log(arr);

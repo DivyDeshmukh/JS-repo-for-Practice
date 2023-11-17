@@ -150,3 +150,31 @@ console.log(priceToPay);
 */
 
 // These methods can be applied to any Iterable Objects just like arrays
+
+// sort 
+// const arr = [1, 60, 3, 56, 2];
+// const obj = {
+//     name: 'Divy',
+//     age: 21,
+//     course: 'computer science'
+// }
+
+// let arr2 = arr.sort (function (a, b) {
+//     return a - b;
+// });
+
+// console.log(arr2);
+
+// sum of whole numbers with reduce
+// const arr = [1, 2, 3, 4, 5];
+// const obj = {
+//     name: 'Divy',
+//     age: 21,
+//     course: 'computer science'
+// }
+
+// let result = arr.reduce ( (acc, initialVal) => {
+//     return acc+initialVal;
+// }, 0 );
+// console.log(result);
+
